@@ -16,7 +16,7 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-        <Link href="../auth/login">Login</Link>
+        <Link href="home">Login</Link>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />

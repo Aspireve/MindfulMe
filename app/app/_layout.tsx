@@ -32,13 +32,17 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={DefaultTheme}>
       <SafeAreaProvider>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack initialRouteName="home/default">
+          {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
+          <Stack.Screen name="auth/login" options={{ headerShown: false }} />
+          <Stack.Screen name="questions/form" options={{ headerShown: false }} />
+          <Stack.Screen name="home/default" options={{ headerShown: false }} />
+          <Stack.Screen name="meditation/index" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
         </Stack>
-      </SafeAreaProvider>
+      </SafeAreaProvider> 
     </ThemeProvider>
   );
 }
